@@ -17,7 +17,7 @@ for index, todo in enumerate(todos):
         todos.pop(index)
         functions.write_todos(todos)
         del st.session_state[todo]
-        st._experimental_rerun()
+        st.rerun()
 
 st.text_input(label='',placeholder='Enter a new Todo Task here...', on_change=update_todo,key='todotask')
 
